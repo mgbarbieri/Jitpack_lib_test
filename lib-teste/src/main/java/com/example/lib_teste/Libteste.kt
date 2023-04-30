@@ -6,10 +6,11 @@ import com.millicast.Media
 class Libteste (private val context: Context) {
     private var media: Media? = null
 
-    fun getMedia(): Media? {
+    fun teste(): Boolean {
         if (media == null) {
             media = Media.getInstance(context)
+            return true
         }
-        return media
+        return false
     }
 }
