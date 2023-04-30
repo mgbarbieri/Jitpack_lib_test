@@ -10,9 +10,17 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/millicast/maven")
+            credentials {
+                username = "mgbarbieri"
+                password = "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"
+            }
+        }
     }
 }
 rootProject.name = "My Application lib test"
 include ':app'
 include ':lib-teste'
-include ':lib-teste:MillicastSDK'
